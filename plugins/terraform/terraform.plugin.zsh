@@ -1,5 +1,7 @@
 if (( $+commands[terraform] )); then
-  cp _terraform $ZSH_CACHE_DIR/completions/_terraform
+  mkdir -p $ZSH_CACHE_DIR/completions/_terraform
+
+  cat ${${(%):-%N}:A:h}/_terraform > $ZSH_CACHE_DIR/completions/_terraform
 
   # If the completion file doesn't exist yet, we need to autoload it and
   # bind it to `terraform`. Otherwise, compinit will have already done that.
