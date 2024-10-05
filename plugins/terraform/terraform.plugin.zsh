@@ -1,5 +1,5 @@
 if (( $+commands[terraform] )); then
-  mkdir -p $ZSH_CACHE_DIR/completions/_terraform
+  mkdir -p $ZSH_CACHE_DIR/completions
 
   cat ${${(%):-%N}:A:h}/_terraform > $ZSH_CACHE_DIR/completions/_terraform
 
