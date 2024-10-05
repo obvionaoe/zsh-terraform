@@ -1,6 +1,4 @@
 if (( $+commands[terraform] )); then
-  mkdir -p $ZSH_CACHE_DIR/completions
-
   cat ${${(%):-%N}:A:h}/_terraform > $ZSH_CACHE_DIR/completions/_terraform
 
   # If the completion file doesn't exist yet, we need to autoload it and
@@ -24,9 +22,6 @@ if (( $+commands[terraform] )); then
 
   alias tfa!='tfa -auto-approve'
   alias tfia!='tfi && tfa!'
-
-  alias tfd!='tfd -auto-approve'
-  alias tfid!='tfi && tfd!'
 
   alias tfv='tf validate'
   alias tfiv='tfi && tfv'
